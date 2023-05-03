@@ -1,0 +1,20 @@
+//Objectif est d'ajouter un article dans la base de donnees  en utilisant LE MVC 
+// ORM  object relational mapping  (Eloquent) : Article::all() => select * from articles
+// fichier de migration :  permettent de creer les tables dans la bd
+// commande CLI :
+//creer le model Artcile et le fichier de migration qui va creer la table articles
+// php artisan make:model  Article -m
+//lancer la migration 
+// php artisan migrate
+// recreer toutes les tables de la base de donnes ( dont le nom est preciser dans le fichier .env )
+// php artisan migrate:fresh
+// php artisan serve --port=3400
+php artisan make:controller ArticleController 
+// pour rediriger vers le controller et sa  fontion
+Route::get('/article/create', [ArticleController::class,'create']);
+// n'oublier pas d'ajouter : @csrf entre form et /form
+// aussi de declarer les champs fillables dans le model
+class Article extends Model
+{    use HasFactory;
+protected $fillable=['libelle','prix'];//ici
+}
