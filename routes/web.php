@@ -6,10 +6,9 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\CategorieController;
-
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Web Routes :
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
